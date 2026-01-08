@@ -6,8 +6,6 @@ This project is an **end-to-end Machine Learning system** for predicting **custo
 
 The goal is **not just model accuracy**, but to demonstrate **ML engineering best practices** such as reproducible training, real-time inference, batch inference, prediction logging, and data drift detection.
 
----
-
 ## 🧠 Problem Statement
 
 Customer churn refers to customers leaving a service or subscription. Predicting churn allows businesses to:
@@ -17,8 +15,6 @@ Customer churn refers to customers leaving a service or subscription. Predicting
 * Reduce revenue loss
 
 This project predicts whether a customer is likely to churn based on historical usage and account information.
-
----
 
 ## 📊 Dataset
 
@@ -39,8 +35,6 @@ This project predicts whether a customer is likely to churn based on historical 
 
 The `Churn` column is used **only during training** and is excluded during inference.
 
----
-
 ## ⚙️ System Architecture
 
 ```
@@ -59,8 +53,6 @@ Prediction Logging
 Data Drift Detection
 ```
 
----
-
 ## 🤖 Model Training
 
 * **Type:** Supervised Binary Classification
@@ -78,7 +70,6 @@ Multiple models were evaluated. Several converged to similar performance, indica
 
 This score is realistic for churn prediction and reflects a balanced trade-off between precision and recall.
 
----
 
 ## 🔍 Why F1 Score ≈ 0.62 is Acceptable
 
@@ -86,8 +77,6 @@ This score is realistic for churn prediction and reflects a balanced trade-off b
 * Many production churn models operate in the 0.60–0.70 F1 range
 * The model shows **stable and interpretable behavior**
 * Focus is on system reliability rather than metric over-optimization
-
----
 
 ## 🚀 Inference
 
@@ -102,8 +91,6 @@ This score is realistic for churn prediction and reflects a balanced trade-off b
 
 This simulates how ML models are served in production.
 
----
-
 ### 2️⃣ Batch Inference
 
 * Loads a CSV file of customers
@@ -111,8 +98,6 @@ This simulates how ML models are served in production.
 * Saves predictions to an output CSV
 
 This simulates nightly or weekly batch scoring used in real businesses.
-
----
 
 ## 📝 Prediction Logging
 
@@ -125,8 +110,6 @@ Every inference request is logged with:
 
 Logs are stored in a CSV file and used for monitoring and drift detection.
 
----
-
 ## 📉 Data Drift Detection
 
 * Compares training data vs inference data
@@ -134,8 +117,6 @@ Logs are stored in a CSV file and used for monitoring and drift detection.
 * Detects distribution shifts that may require retraining
 
 This demonstrates **MLOps and production monitoring awareness**.
-
----
 
 ## 📁 Project Structure
 
@@ -167,8 +148,6 @@ customer_churn_ml_platform/
 └── requirements.txt
 
 ```
-
----
 
 ## ▶️ How to Run
 
@@ -202,8 +181,6 @@ python inference/batch_inference.py
 python monitoring/drift_check.py
 ```
 
----
-
 ## 💼 What This Project Demonstrates
 
 ✔ End-to-end ML lifecycle
@@ -213,8 +190,6 @@ python monitoring/drift_check.py
 ✔ Logging & monitoring readiness
 ✔ MLOps and ML Architect thinking
 
----
-
 ## 📌 Future Improvements
 
 * Automated retraining triggers
@@ -222,12 +197,8 @@ python monitoring/drift_check.py
 * Dashboard for monitoring metrics
 * Database-backed logging
 
----
-
 ## 🏁 Final Note
 
 This project focuses on **engineering robustness and real-world applicability**, not leaderboard-style optimization. It reflects how ML systems are built and maintained in production environments.
-
----
 
 **Author:** Shraddha Gupta
